@@ -1,112 +1,66 @@
 📊 Bitcoin Market Sentiment vs Trader Performance
-A Quantitative Analysis of Behavioral Bias in Crypto Trading
 🧠 Overview
 
 This project analyzes the relationship between Bitcoin market sentiment (Fear & Greed Index) and trader performance on Hyperliquid.
 
-The objective is to understand whether market emotions influence profitability, risk behavior, and execution quality in real trading environments.
+It evaluates whether market emotions influence:
 
+Profitability
+Win rate
+Trading behavior
+Risk exposure
 🎯 Objective
-
-This study investigates how trader behavior changes under different market sentiment regimes by analyzing:
-
-💰 Profitability (Closed PnL)
-🎯 Win rate distribution
-📦 Trade size and exposure behavior
-⚖️ Risk-taking patterns under emotional markets
+Merge trading data with sentiment index
+Study performance across sentiment regimes
+Identify behavioral trading patterns
 📁 Datasets
-📌 1. Bitcoin Market Sentiment Dataset
+📌 Bitcoin Sentiment Dataset
 Date
-Classification (Fear / Greed / Neutral / Extreme Fear / Extreme Greed)
-📌 2. Hyperliquid Trader Dataset
-
-Includes trade-level execution data:
-
+Classification → Fear / Greed / Neutral / Extreme Fear / Extreme Greed
+📌 Hyperliquid Trading Dataset
 Account ID
 Symbol
 Execution Price
-Size (Position / Tokens / USD)
+Trade Size
 Side (BUY / SELL)
 Closed PnL
 Leverage
 Timestamp
-Trade event metadata
 ⚙️ Methodology
-🔄 Data Processing Pipeline
-Converted timestamp → trading date
-Standardized and cleaned trading records
-Merged datasets on date
-Engineered features:
+🔹 Step 1: Data Preprocessing
+Converted timestamp → date
+Cleaned and standardized trading data
+🔹 Step 2: Data Merging
+Merged trading data with sentiment index on date
+🔹 Step 3: Feature Engineering
 win_trade = Closed PnL > 0
-Trade-level aggregation metrics
-🧩 Analytical Framework
-
-The analysis is structured across three dimensions:
-
-Performance Analysis
-Profitability across sentiment regimes
-Win rate comparison
-Behavioral Analysis
-Trade size variation
-Position exposure changes
-Risk Analysis
-Leverage usage patterns
-Behavior under extreme sentiment conditions
+🔹 Step 4: Aggregation
+Grouped by sentiment category
+Computed:
+Total PnL
+Average PnL
+Win rate
+Trade size distribution
 📊 Key Insights
-💰 1. Profitability is Strongly Sentiment-Dependent
-Extreme Greed → Highest profitability
-Greed → Consistently positive performance
-Fear / Extreme Fear → Lower and unstable returns
+💰 Profitability
+Highest profits observed during Greed / Extreme Greed
+Lower and unstable returns during Fear regimes
+🎯 Win Rate
+Highest win rate in Greed conditions
+Lowest win rate in Extreme Fear
+📦 Trading Behavior
+Trade size increases during emotional extremes
+More cautious behavior in Neutral markets
+📌 Conclusion
 
-📌 Insight:
-Risk-on sentiment phases significantly improve trading outcomes.
+Market sentiment has a clear and measurable impact on trading performance.
 
-🎯 2. Win Rate Varies Across Market Psychology
-Highest win rate observed in Greed / Extreme Greed regimes
-Lowest win rate during Extreme Fear phases
+🟢 Greed → higher profitability and win rate
+🔴 Fear → lower performance and inconsistency
 
-📌 Insight:
-Execution accuracy improves when market sentiment is positive.
+Key Insight:
+Sentiment is a strong behavioral signal in crypto trading.
 
-📦 3. Trade Size & Risk Exposure Behavior
-Higher trade sizes observed during Fear and Greed regimes
-Reduced activity in neutral environments
-Extreme sentiment leads to more aggressive positioning
-
-📌 Insight:
-Trader risk appetite is directly influenced by market emotion.
-
-⚠️ 4. Behavioral Observation
-
-Market sentiment not only affects outcomes but also:
-
-Decision confidence
-Trade frequency
-Position sizing discipline
-
-📌 Insight:
-Trading behavior is emotionally adaptive rather than purely rational.
-
-🧠 Core Insight
-
-Market sentiment acts as a behavioral driver, influencing both decision-making and execution quality in crypto trading environments.
-
-📈 Conclusion
-
-The analysis confirms a clear relationship between market psychology and trading performance:
-
-Sentiment Regime	Trader Behavior
-🟢 Greed	High confidence, better performance
-🔴 Fear	Defensive behavior, inconsistent returns
-⚪ Neutral	Mixed and indecisive trading patterns
-🚀 Potential Applications
-
-This analysis can be extended into:
-
-📊 Sentiment-based trading strategies
-⚖️ Dynamic risk management systems
-🤖 ML-based PnL prediction models
-⚡ Real-time trading signal generation
 🛠️ Tools Used
 Python
 Pandas
