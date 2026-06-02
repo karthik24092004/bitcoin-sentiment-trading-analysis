@@ -107,6 +107,4 @@ Extend analysis to multiple crypto assets
 Karthik Reddy
 GitHub: https://github.com/karthik24092004
 
-<div align="center">
-⭐ If you like this project, consider exploring more of my work
-</div>
+
