@@ -1,81 +1,112 @@
-📊 Bitcoin Market Sentiment vs Trader Performance
-🧠 Overview
+<div align="center">
 
-This project analyzes the relationship between Bitcoin market sentiment (Fear & Greed Index) and trader performance on Hyperliquid.
+# 📊 Bitcoin Sentiment vs Trader Performance Analysis
 
-It evaluates whether market emotions influence:
+### *Do market emotions drive trading profits?*
 
-Profitability
-Win rate
-Trading behavior
-Risk exposure
-🎯 Objective
-Merge trading data with sentiment index
-Study performance across sentiment regimes
-Identify behavioral trading patterns
-📁 Datasets
-📌 Bitcoin Sentiment Dataset
-Date
-Classification → Fear / Greed / Neutral / Extreme Fear / Extreme Greed
-📌 Hyperliquid Trading Dataset
-Account ID
-Symbol
-Execution Price
-Trade Size
-Side (BUY / SELL)
-Closed PnL
-Leverage
-Timestamp
-⚙️ Methodology
-🔹 Step 1: Data Preprocessing
-Converted timestamp → date
-Cleaned and standardized trading data
-🔹 Step 2: Data Merging
-Merged trading data with sentiment index on date
-🔹 Step 3: Feature Engineering
-win_trade = Closed PnL > 0
-🔹 Step 4: Aggregation
-Grouped by sentiment category
-Computed:
-Total PnL
-Average PnL
-Win rate
-Trade size distribution
-📊 Key Insights
-💰 Profitability
-Highest profits observed during Greed / Extreme Greed
-Lower and unstable returns during Fear regimes
-🎯 Win Rate
-Highest win rate in Greed conditions
-Lowest win rate in Extreme Fear
-📦 Trading Behavior
-Trade size increases during emotional extremes
-More cautious behavior in Neutral markets
-📌 Conclusion
+> A data-driven study exploring how Bitcoin Fear & Greed sentiment influences trader behavior and profitability using real Hyperliquid trading data.
 
-Market sentiment has a clear and measurable impact on trading performance.
+🌐 *Built with Python, Pandas & real crypto market data*
 
-🟢 Greed → higher profitability and win rate
-🔴 Fear → lower performance and inconsistency
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Visualization-11557C?style=for-the-badge)
 
-Key Insight:
-Sentiment is a strong behavioral signal in crypto trading.
+</div>
 
-🛠️ Tools Used
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Jupyter Notebook
-📂 Repository Structure
-sentiment-trading-analysis/
-│
-├── sentiment_trading_analysis.ipynb
-├── README.md
-├── historical_data.csv
-├── fear_greed_index.csv
+---
+
+## 🌟 Why This Project?
+
+Crypto markets are driven by emotion — not logic.
+
+Fear leads to panic selling.  
+Greed leads to over-leveraged buying.
+
+This project investigates:
+
+> **Can we quantify how market sentiment affects trader profitability?**
+
+---
+
+## 📁 Datasets Used
+
+### 📊 Hyperliquid Trading Data
+- Account-level trade history
+- Execution price & position size
+- Closed PnL (profit/loss)
+- Trade direction (BUY/SELL)
+- Timestamp-level execution data
+
+### 🧠 Bitcoin Fear & Greed Index
+- Daily sentiment score (0–100)
+- Classified into:
+  - Extreme Fear
+  - Fear
+  - Neutral
+  - Greed
+  - Extreme Greed
+
+---
+
+## ⚙️ Workflow
+
+```text
+📥 Data Collection
+        ↓
+🧹 Data Cleaning & Timestamp Processing
+        ↓
+🔗 Merge Trading Data + Sentiment Index
+        ↓
+📊 Group Analysis by Sentiment Class
+        ↓
+📈 Profitability & Win Rate Evaluation
+        ↓
+💡 Insight Extraction
+📊 Key Findings
+💰 Profitability vs Sentiment
+Highest total profits observed during Greed phases
+Extreme Fear shows lower trading efficiency
+🎯 Win Rate Analysis
+🟢 Extreme Greed → ~46% win rate (highest)
+🔴 Extreme Fear → ~37% win rate (lowest)
+📦 Trading Behavior Patterns
+Traders take larger positions during emotional extremes
+Market sentiment strongly influences risk appetite
+Behavioral bias is clearly visible in execution data
+📌 Key Insight
+
+📉 Markets are not just mathematical systems — they are emotional systems.
+
+✔ Greed improves confidence but increases risk
+✔ Fear reduces participation but also reduces accuracy
+✔ Sentiment is a powerful trading signal
+
+🛠️ Tech Stack
+Tool	Purpose
+🐍 Python	Core analysis
+📦 Pandas	Data processing
+🔢 NumPy	Numerical computation
+📊 Matplotlib	Visualization
+📈 Seaborn	Statistical plots
+📓 Jupyter Notebook	Interactive analysis
+📁 Project Structure
+📦 Bitcoin-Sentiment-Analysis
+ ┣ 📜 sentiment_trading_analysis.ipynb
+ ┣ 📜 README.md
+ ┣ 📊 historical_data.csv
+ ┣ 📊 fear_greed_index.csv
+🚀 Future Improvements
+Predict trader profitability using sentiment signals
+Build real-time sentiment trading dashboard
+Add risk-adjusted performance metrics (Sharpe Ratio)
+Extend analysis to multiple crypto assets
 👤 Author
 
 Karthik Reddy
 GitHub: https://github.com/karthik24092004
+
+<div align="center">
+⭐ If you like this project, consider exploring more of my work
+</div>
